@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "test",
+      "password_hash": "$2b$10$uir0Jt7m9G2Pw5ip1Ml65eBWvLjJfJcTB1fxQgR0YTSl4wQAlLNp2",
+      "created_at": "2026-05-18T20:27:53.873Z"
+    },
+    {
+      "id": 2,
+      "email": "test@test.com",
+      "password_hash": "$2b$10$/SIF6vdliFQni5D.THhE5O/.IycXDTm2Div1HeWNDvKfH50rlzQIG",
+      "created_at": "2026-05-26T00:07:59.670Z"
+    },
+    {
+      "id": 3,
+      "email": "zxc@gmail.com",
+      "password_hash": "$2b$10$Ez5w553u4mRYvp2/mklmvurrQP6zTPHmIlpiLoCRDBwc7eCa7kPke",
+      "created_at": "2026-05-26T19:43:53.377Z"
+    },
+    {
+      "id": 4,
+      "email": "broggi@outlook.com",
+      "password_hash": "$2b$10$GiNeq2dQMbcHDdku4MA8SO6FLfr/48A2BC7MBf3oG7LZpc765Cmye",
+      "created_at": "2026-05-27T02:31:10.474Z"
+    }
+  ]
+}
