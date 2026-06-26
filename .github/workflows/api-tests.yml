@@ -1,0 +1,41 @@
+name: API Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias del backend
+        run: |
+          cd backend
+          npm install
+
+      - name: Instalar Newman globalmente
+        run: npm install -g newman
+
+      - name: Ejecutar pruebas de Postman
+        run: |
+          newman run postman/app-12.14.5/Mi API - Sistema de autenticacion.postman_collection.json \
+            -e postman/app-12.14.5/Desarrollo Local.postman_environment.json \
+            --reporters cli,json \
+            --reporter-json-export resultados.json
+
+      - name: Subir reporte como artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: reporte-json
+          path: resultados.json
